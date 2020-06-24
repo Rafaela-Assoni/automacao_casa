@@ -29,12 +29,12 @@ Caso isso não ocorra, um alarme sonoro é ativado na forma intermitente (2 min.
 até seu fechamento, ou desativação do alarme de forma manual (dado pela mesma senha do acesso).
 
 _*Sala de Estar_
-*A sala de estar conta com um sensor de temperatura, que é responsável por acionar o ar condicionado, 
+* A sala de estar conta com um sensor de temperatura, que é responsável por acionar o ar condicionado, 
 com o objetivo de manter a temperatura no valor definido pelo usuário. Além disso o controle do ar e 
 a luminosidade da sala também podem ser ativados remotamente de forma manual, por meio da interface WEB. 
 
 _*Cortinas da sala de estar e de jantar_
-*As posições das cortinas das janelas poderão ser controladas e monitorada remotamente pela interface WEB. 
+* As posições das cortinas das janelas poderão ser controladas e monitorada remotamente pela interface WEB. 
 As cortinas devem abrir automaticamente conforme horários programados na página WEB de configuração, e três horários poderão ser programados:
 
 Horário 1 -> para abertura na metade do seu curs
@@ -46,7 +46,7 @@ e tem como principal objetivo, no momento em que o vento externo ultrapassa a ve
 as cortinas devem ser fechadas.
   
 _*Quarto e Banheiro_
-*O cômodo do quarto e banheiro possui a luminosidade controlada remotamente, 
+* O cômodo do quarto e banheiro possui a luminosidade controlada remotamente, 
  e, além disso, um sensor de temperatura. Quando a temperatura for inferior a 17°C, 
  o aquecedor presente no local deve ser ligado automaticamente.
 
