@@ -18,7 +18,7 @@ estado da porta de entrada, etc.
 Os estados atuais dessas variáveis podem ser visualizados através de uma interface WEB, sendo possível agir sobre elas.
 
 
-![](../header.png)
+![](images/header.png)
 
 
 ## Especificações do Projeto 
