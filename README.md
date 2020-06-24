@@ -72,6 +72,7 @@ _PÁGINA DE MONITORAMENTO_
 
 
 _PÁGINA DE AÇÃO_
+
 ![](images/acao.PNG)
 
 
