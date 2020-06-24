@@ -17,7 +17,7 @@ O sistema monitora algumas variáveis como temperatura, velocidade do vento, pos
 estado da porta de entrada, etc. 
 Os estados atuais dessas variáveis podem ser visualizados através de uma interface WEB, sendo possível agir sobre elas.
 
-_PLANTA DO APARTAMENTO_
+**_PLANTA DO APARTAMENTO_**
 ![](images/header.png)
 
 
