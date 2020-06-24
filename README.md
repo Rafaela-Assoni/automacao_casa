@@ -71,6 +71,7 @@ msg[8]='F' = quarto byte de dado
 msg[9]='A' = primeiro byte do LRC
 msg[10]='E'= segundo bye do LRC
 
+
 Obs:  O valor do LRC espresso no exemplo é meramente ilustrativo, não é o cálculo real da mensagem.
 Na versão atual do firmware o LRC não esta sendo empregado.
 
