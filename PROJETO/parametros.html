@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script src="/socket.io/socket.io.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="CSS/estilo.css" />
+
+    <script>
+
+        var socket = io();
+        
+        // função que envia as configurações quando aperta o botão de enviar 
+        
+        function enviaconfig()
+			{
+                console.log('HTML: mandando configurações...');
+				var a = document.getElementById("SenhaPorta").value
+                var b = document.getElementById("SenhaAlarme").value
+                var c = document.getElementById("ClosetTimeout").value
+                var d = document.getElementById("TempAC").value
+                var e = document.getElementById("Hora1").value
+                var f = document.getElementById("Hora2").value
+                var g = document.getElementById("Hora3").value
+                var h = document.getElementById("TemperaturaAq").value
+                
+				socket.emit('config', [a, b, c, d, e, f, g, h])
+			}
+        
+    </script>
+
+     
+    <title>Configurações</title>
+  </head>
+    
+    
+  <body>
+    <header>
+    
+    </header>
+    <div class="container">
+        <a href="index.html">
+          
+            <div class="jumbotron p-4 p-md-5 text-white rounded image-back"> <!-- quando clica na img, volta tela inicial-->
+                
+            </div>
+        </a>
+    </div>
+    <main role="main">
+        <div class="container">
+           
+                
+                <div class="py-5 text-center">
+                    <!-- icone das engrenagens -->
+                    <img class="d-block mx-auto mb-4" src="https://i.ibb.co/0YnfTvS/icone-Conf.png" alt="imagem de engrenagens" width="72" height="72">
+                    <!-- Título no centro da página-->     
+                    <h2>Parâmetros de Configuração</h2>
+                    <!--Paragrafo abaixo do titulo-->
+                    <p class="lead">Nesta página você preencherá o formulário com as preferências para a sua casa inteligente.</p>
+                </div>
+             <!-- Início do formulario-->
+            <form>
+            
+                <div class="row">
+                 <!-- CSS para formatar as linhas-->
+                </div>
+                    <div class="col-md-12 order-md-1">
+                        <!-- Titulo do formulário-->
+                        <h4 class="mb-3">Senhas</h4>
+          
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <!-- Descrição do item-->
+                                <label for="SenhaPorta">Senha da Porta</label>
+                                <!-- campo a ser preenchido-->
+                                <input type="password" name="password-input" class="form-control" id="SenhaPorta" placeholder="Max. 6 digitos" maxlength="6" >
+                
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="SenhaAlarme">Senha do Alarme</label> <!--senha do alarme-->
+                                <input type="password" class="form-control" id="SenhaAlarme" placeholder="Max. 6 digitos" maxlength="6" >
+
+                            </div>
+                        </div>
+                    </div>
+                <h4 class="mb-3">Entrada Principal</h4> 
+                <div class="row">
+                    <div class="col-md-12 mb-3">
+                        <label for="CloseTimeout">Informe o tempo para fechamento da porta</label>
+                        <input type="number" class="form-control" id="ClosetTimeout" placeholder="Em minutos"  min="01" max="60" >
+                    </div>
+                </div>
+                <h4 class="mb-3">Sala de Estar</h4>
+                <div class="row">
+                    <div class="col-md-12 mb-3">
+                        <label for="TempAC">Temperatura do Ar Condicionado</label>
+                        <input type="number" class="form-control" id="TempAC" placeholder=""  min="17" max="25" >
+                        <div class="invalid-feedback">
+                            Informe uma temperatura válida!
+                        </div>
+                    </div>
+                </div>
+                <h4 class="mb-3">Janelas da Sala de Estar e Jantar</h4>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="Hora1">Horário de abertura parcial das janelas</label>
+                        <input type="time" class="form-control" id="Hora1" placeholder=""  min="" max="" >
+                        <div class="invalid-feedback">
+                            Informe um horário válido
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="Hora2">Horário de abertura total das janelas</label>
+                        <input type="time" class="form-control" id="Hora2" placeholder=""  min="" max="" >
+                        <div class="invalid-feedback">
+                            Informe um horário válido
+                        </div>
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label for="Hora3">Horário de fechamento das janelas</label>
+                        <input type="time" class="form-control" id="Hora3" placeholder=""  min="" max="" >
+                        <div class="invalid-feedback">
+                            Informe um horário válido
+                        </div>
+                    </div>
+                            
+                </div>
+                <h4 class="mb-3">Quarto e Banheiro</h4>
+                <div class="row">
+                    <div class="col-md-12 mb-3">
+                        <label for="TempAquec">Temperatura do aquecedor</label>
+                        <input type="number" class="form-control" id="TemperaturaAq" placeholder=""  min="15" max="35" >
+                    </div>
+                </div>
+              
+              
+                <!-- botão para enviar-->
+                <div class="row">
+                    <div class="col-md-12 mb-3">
+                        <button class="btn btn-primary btn-lg btn-block" type="button" onclick="enviaconfig()">Enviar</button>
+                    </div>
+                </div>
+         
+        
+            </form>
+            </div>
+            <hr class="featurette-divider">
+        </div>
+             
+        <!-- Rodapé -->     
+        <footer class="container">
+            <p class="float-right"><a href="#">Back to top</a></p>
+            <p>&copy; 2020 Interface Web Desenvolvida pelos Alunos: Fabiano, Nicholas e Rafaela, &middot; Para disciplina Automação II</p>
+      </footer>
+    </main>
+  </body>
+</html>

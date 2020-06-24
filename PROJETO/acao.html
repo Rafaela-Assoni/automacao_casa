@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="/socket.io/socket.io.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="CSS/estilo.css" />
+
+    <script>
+		var a, b, c, d, e, f, g, h;
+        var socket = io();
+
+        // função que fecha a porta 
+		socket.on('ResSenha', function(dado ){
+                console.log(dado);
+                if(dado == true){
+                    alert("Senha confirmada !")
+                }
+                else {
+                   alert("Senha incorreta !")
+                }
+        })
+		
+        function fechaPorta(x)
+            {    
+                socket.emit('acaoPorta', ['0101', '0000'] );
+				console.log('Fechando Porta ');
+
+            }
+        
+        // função que testa a senha e abre a porta 
+        function AbrePorta()
+        {   
+			socket.emit('comparaSenhaPorta', [document.getElementById("abrPorta").value]);
+            /*if (document.getElementById("abrPorta").value == document.getElementById("senhaPorta").value)
+            {
+                console.log("Abrindo Porta");
+                socket.emit("abrindoPorta", ['0101','FFFF']);
+            }
+            else
+                alert("Senha incorreta !")*/
+        }
+        
+        // função que testa a senha e desliga o alarme
+        function desligaAlarme()
+        {	
+			socket.emit('comparaSenhaAlarme', [document.getElementById("desligaAlarme").value]);
+		/*
+            if (document.getElementById("desligaAlarme").value == document.getElementById("senhaAlarme").value)
+            {
+                console.log("Desligando alarme");
+                socket.emit("desligaAlarme", ['0102'+ x,'0000']);
+            }
+            else
+                alert("Senha incorreta !")*/
+        }
+
+        // função que controla ar condicionado 
+        function arCondi(x)
+            {    
+                if (x == 1)
+                {
+                    socket.emit('acaoAr', ['0201', 'FFFF'] );
+				    console.log('Ligando Ar condicionado');
+                }
+                if (x == 2)
+                {
+                    socket.emit('acaoAr', ['0201', '0000'] );
+                    console.log('Desligando Ar condicionado');
+                }
+
+            }
+
+        // função que controla o aquecedor 
+        function aquecedor(x)
+            {    
+                if (x == 1)
+                {
+                    //socket.emit('acaoAq', ['0404', 'FFFF'] );
+				    console.log('Ligando o aquecedor ');
+                }
+                if (x == 2)
+                {
+                   // socket.emit('acaoAq', ['1404', '0000'] );
+                    console.log('Desligando o aquecedor');
+                }
+            }
+
+        
+        
+        // função que controla lâmpadas sala de estar
+        function lampadaSala(x)
+            {    
+                socket.emit('lampSala', ['0202', '0'+ x] );
+				console.log('Lâmpadas da sala de estar');
+            }
+        
+
+        // função que controla lâmpadas do quarto e banheiro
+        function lampadaQuarto(x)
+            {    
+                socket.emit('lampQuarto', ['0401', '0'+ x] );
+				console.log('Lâmpadas do quarto');
+
+            }
+
+        // função para cortina 1 
+        function cortina1acao (x)
+        {
+            socket.emit('cortina1', ['0301', '0'+ x] );
+			console.log('Cortina 1');
+
+
+        }
+
+
+        // função para cortina 2 
+         function cortina2acao (x)
+        {
+            socket.emit('cortina2', ['0302', '0'+ x] );
+			console.log('Cortina 2');
+
+        }
+        
+        
+    </script>
+   
+      
+    <title>Ações</title>
+  </head>
+    
+    
+    <body>
+        <header>
+    
+        </header>
+        <div class="container">
+            <a href="index.html">
+          
+                <div class="jumbotron p-4 p-md-5 text-white rounded image-back">
+                    
+                </div>
+            </a>
+        </div>
+        <main role="main">
+            <div class="container">
+                <div class="py-5 text-center">
+                    <!-- icone monitoramento-->
+                    <img class="d-block mx-auto mb-4" src="https://i.ibb.co/SKbgMws/icone-Acao.png" alt="imagem de engrenagens" width="72" height="72">
+                    <!-- Título no centro da página-->     
+                    <h2>Controle Manual</h2>
+                    <!--Paragrafo abaixo do titulo-->
+                    <p class="lead">Ativar as seguintes funcionalidades:</p>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-12 order-md-1">
+                    
+                   
+                    <div class="row">
+                        
+                        <div class="col-md-6 mb-3">
+                            <h4 class="mb-3">Entrada Principal - PORTA</h4>
+                            <div class="row">
+                                <div class="col-md-12 mb-3">
+                                    
+                                    <label for="Portas">Porta: </label>
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-dark"  >
+                                            <input type="radio" name="optionsPorta" id="FecharPorta" onclick="fechaPorta(2)"> Fechar
+                                        </label>
+                                    </div>
+
+                                </div>
+
+                                <div class="input-group col-md-8 mb-3">
+                                    <input id="abrPorta" type="password" class="form-control" placeholder="Digite a senha para abrir a porta" aria-label="Abrir Porta" aria-describedby="abrPorta">
+                                    <div class="input-group-append">
+                                      <button class="btn btn-success" type="button" id="abrPorta" onclick="AbrePorta(1)">Abrir</button>
+                                    </div>
+                                  </div>
+
+                                <div class="input-group col-md-8 mb-3">
+                                    <input id="desligaAlarme"  type="password" class="form-control" placeholder="Senha alarme" aria-label="Senha alarme" aria-describedby="desligaAlarme">
+                                    <div class="input-group-append">
+                                      <button class="btn btn-danger" type="button" id="desligaAlarme" onclick="desligaAlarme()">Desligar</button>
+                                    </div>
+                                  </div>
+
+                                
+                            </div>
+                        </div>
+                           
+                          
+                        <div class="col-md-6 mb-3">
+                            <h4 class="mb-3">Sala de Estar</h4>
+                                  
+                            <div class="row">
+
+                                <div class="col-md-12 mb-3">
+                                    <label for="AC"> Ar Condicionado:</label>
+                                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                            <label class="btn btn-success" >
+                                                <input type="radio" name="optionsAC" id="ArLigar" onclick="arCondi(1)"> Ligar
+                                            </label>
+                                            <label class="btn btn-dark" >
+                                                <input type="radio" name="optionsAC" id="ArDesligar" onclick="arCondi(2)"> Desligar
+                                            </label>
+                                        </div>
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <div class="form-group">
+                                        <label for="formControlRange">Lâmpadas (luminosidade %): </label>
+                                        <input type="range" name="rangeInput" min="0" max="100"  class="form-control-range" id="luzSala" onchange="lampadaSala(document.getElementById('luzSala').value);">
+                                    </div>
+                                   
+                                </div>                                    
+                            </div>
+                                  
+                        </div>
+                    </div>
+                       
+                         
+                       
+                </div>
+
+                <div class="col-md-12 order-md-1">
+                   
+                    <div class="row">
+
+                        <div class="col-md-6 mb-3">
+                            <h4 class="mb-3">Cortina 1</h4>
+                            <div class="row">
+                                
+                                <div class="col-md-6 mb-3">
+                                    <div class="form-group">
+                                        <label for="formControlRange">Modo Manual: </label>
+                                        <input type="range" name="rangeInput" min="0" max="100"  class="form-control-range" id="corti1" onchange="cortina1acao(document.getElementById('corti1').value);">
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <h4 class="mb-3">Cortinas 2</h4>
+                            <div class="row">
+                                
+                                <div class="col-md-6 mb-3">
+                                    <div class="form-group">
+                                        <label for="formControlRange">Modo Manual: </label>
+                                        <input type="range" name="rangeInput" min="0" max="100"  class="form-control-range" id="corti2" onchange="cortina2acao(document.getElementById('corti2').value);">
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                           
+                          
+                        <div class="col-md-6 mb-3">
+                            <h4 class="mb-3">Quarto e Banheiro</h4>
+                                  
+                            <div class="row">
+
+                                <div class="col-md-12 mb-3">
+                                    <label for="AC"> Aquecedor:</label>
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-success" >
+                                            <input type="radio" name="optionsAquecedor" id="AqLigar" onclick="aquecedor(1)"> Ligar
+                                        </label>
+                                        <label class="btn btn-dark" >
+                                            <input type="radio" name="optionsAquecedor" id="AqDesligar" onclick="aquecedor(2)"> Desligar
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <div class="form-group">
+                                        <label for="formControlRange">Lâmpadas (luminosidade %): </label>
+                                        <input type="range" name="rangeInput" min="0" max="100"  class="form-control-range" id="luzQuarto" onchange="lampadaQuarto(document.getElementById('luzQuarto').value);">
+                                    </div>
+                                   
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                       
+                         
+                       
+                </div>
+               
+              
+               
+      
+                </div>
+                <hr class="featurette-divider">
+                
+            
+        </div>
+           
+           
+            <footer class="container">
+                <p class="float-right"><a href="#">Back to top</a></p>
+                <p>&copy; 2020 Interface Web Desenvolvida pelos Alunos: Fabiano, Nicholas e Rafaela, &middot; Para disciplina Automação II</p>
+            </footer>
+        </main>
+    </body>
+</html>
+ 
