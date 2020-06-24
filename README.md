@@ -37,9 +37,9 @@ _*Cortinas da sala de estar e de jantar_
 * As posições das cortinas das janelas poderão ser controladas e monitorada remotamente pela interface WEB. 
 As cortinas devem abrir automaticamente conforme horários programados na página WEB de configuração, e três horários poderão ser programados:
 
-Horário 1 -> para abertura na metade do seu curs
-Horário 2 -> para abertura total 
-Horário 3 -> para fechamento total
+_*Horário 1 -> para abertura na metade do seu curso_
+_*Horário 2 -> para abertura total_
+_*Horário 3 -> para fechamento total_
 
 Além do monitoramento das cortinas, o sistema também possui o monitoramento do vento externo, 
 e tem como principal objetivo, no momento em que o vento externo ultrapassa a velocidade de 50km/h, 
