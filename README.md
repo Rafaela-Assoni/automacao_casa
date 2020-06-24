@@ -3,9 +3,6 @@
 utilizando tecnologias como NodeJS, HTML, C e um simulador para 
 representar o funcionamento do harware.
 
-[![NPM Version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-[![Downloads Stats][npm-downloads]][npm-url]
 
 O que é automação residencial?
 	Automação residencial pode ser resumida como a aplicação das tecnologias, dentro das nossas casas. 
