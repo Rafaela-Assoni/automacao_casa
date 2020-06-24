@@ -59,16 +59,27 @@ _*Protocolo implementado_
 [:][envio/recepcao][local/cômodo][0][acao no comodo][dado][dado][dado][dado][lrc1][lrc2]
 
 Exemplo: :0101FFFFAE
+
 msg[0]=':' = inicio da mensagem
+
 msg[1]='0' = envio do servidor para o arduino (caso for '1', é envio do arduino para o servidor)
+
 msg[2]='1' = identificador do local/cômodo
+
 msg[3]='0' = byte fixo, nao esta sendo usado
+
 msg[4]='1' = identificador da ação a se realizar no local/cômodo
+
 msg[5]='F' = primeiro byte de dado
+
 msg[6]='F' = segundo byte de dado
+
 msg[7]='F' = terceiro byte de dado
+
 msg[8]='F' = quarto byte de dado
+
 msg[9]='A' = primeiro byte do LRC
+
 msg[10]='E'= segundo bye do LRC
 
 
