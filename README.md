@@ -58,10 +58,10 @@ Abaixo mostrado o esquemático da simulação no software utilizado (proteus).
 
 ## Páginas HTML
 
-![](images/pagina_inicial.png)
-![](images/configuracao.png)
-![](images/monitorar.png)
-![](images/acao.png)
+![](images/pagina_inicial.PNG)
+![](images/configuracao.PNG)
+![](images/monitorar.PNG)
+![](images/acao.PNG)
 
 
 ## Vídeo
