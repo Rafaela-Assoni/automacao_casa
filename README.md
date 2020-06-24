@@ -5,16 +5,16 @@ representar o funcionamento do harware.
 
 
 O que é automação residencial?
-	Automação residencial pode ser resumida como a aplicação das tecnologias, dentro das nossas casas. 
-    Tem como objetivo facilitar tarefas que antes dependiam somente dos morados, como ligar lâmpadas, 
-    fechar portas, ligar sons e controlar temperaturas. Com sensores de presença, 
-    temporizadores ou até um simples toque em um botão do controle remoto, 
-    é possível acionar serviços, trazendo praticidade, segurança, economia e conforto.
+Automação residencial pode ser resumida como a aplicação das tecnologias, dentro das nossas casas. 
+Tem como objetivo facilitar tarefas que antes dependiam somente dos morados, como ligar lâmpadas, 
+fechar portas, ligar sons e controlar temperaturas. Com sensores de presença, 
+temporizadores ou até um simples toque em um botão do controle remoto, 
+é possível acionar serviços, trazendo praticidade, segurança, economia e conforto.
 
-	O objetivo deste trabalho é projetar um sistema de controle para automatizar um apartamento. 
-    O sistema monitora algumas variáveis como temperatura, velocidade do vento, posição das cortinas, 
-    estado da porta de entrada, etc. 
-    Os estados atuais dessas variáveis podem ser visualizados através de uma interface WEB, sendo possível agir sobre elas.
+O objetivo deste trabalho é projetar um sistema de controle para automatizar um apartamento. 
+O sistema monitora algumas variáveis como temperatura, velocidade do vento, posição das cortinas, 
+estado da porta de entrada, etc. 
+Os estados atuais dessas variáveis podem ser visualizados através de uma interface WEB, sendo possível agir sobre elas.
 
 
 ![](../header.png)
