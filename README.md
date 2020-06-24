@@ -60,10 +60,13 @@ Abaixo mostrado o esquemático da simulação no software utilizado (proteus).
 
 _PÁGINA INICIAL_
 ![](images/pagina_inicial.PNG)
+
 _PÁGINA DE CONFIGURAÇÃO_
 ![](images/configuracao.PNG)
+
 _PÁGINA DE MONITORAMENTO_
 ![](images/monitorar.PNG)
+
 _PÁGINA DE AÇÃO_
 ![](images/acao.PNG)
 
