@@ -5,6 +5,7 @@ representar o funcionamento do harware.
 
 
 O que é automação residencial?
+
 Automação residencial pode ser resumida como a aplicação das tecnologias, dentro das nossas casas. 
 Tem como objetivo facilitar tarefas que antes dependiam somente dos morados, como ligar lâmpadas, 
 fechar portas, ligar sons e controlar temperaturas. Com sensores de presença, 
