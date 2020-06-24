@@ -53,7 +53,7 @@ _*Quarto e Banheiro_
  e, além disso, um sensor de temperatura. Quando a temperatura for inferior a 17°C, 
  o aquecedor presente no local deve ser ligado automaticamente.
 
-_*Protocolo implementado_
+_**Protocolo implementado**_
 
   Formato do protocolo, onde cada colchete é um byte:
 [:][envio/recepcao][local/cômodo][0][acao no comodo][dado][dado][dado][dado][lrc1][lrc2]
