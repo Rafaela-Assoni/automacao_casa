@@ -17,8 +17,8 @@ O sistema monitora algumas variáveis como temperatura, velocidade do vento, pos
 estado da porta de entrada, etc. 
 Os estados atuais dessas variáveis podem ser visualizados através de uma interface WEB, sendo possível agir sobre elas.
 
-
-![](../header.png)
+**_PLANTA DO APARTAMENTO_**
+![](images/header.png)
 
 
 ## Especificações do Projeto 
@@ -38,9 +38,11 @@ _*Cortinas da sala de estar e de jantar_
 * As posições das cortinas das janelas poderão ser controladas e monitorada remotamente pela interface WEB. 
 As cortinas devem abrir automaticamente conforme horários programados na página WEB de configuração, e três horários poderão ser programados:
 
-_*Horário 1 -> para abertura na metade do seu curso_
-_*Horário 2 -> para abertura total_
-_*Horário 3 -> para fechamento total_
+_* Horário 1 -> para abertura na metade do seu curso_
+
+_* Horário 2 -> para abertura total_
+
+_* Horário 3 -> para fechamento total_
 
 Além do monitoramento das cortinas, o sistema também possui o monitoramento do vento externo, 
 e tem como principal objetivo, no momento em que o vento externo ultrapassa a velocidade de 50km/h, 
@@ -58,10 +60,22 @@ Abaixo mostrado o esquemático da simulação no software utilizado (proteus).
 
 ## Páginas HTML
 
-![](../pagina_inicial.png)
-![](../configuracao.png)
-![](../monitorar.png)
-![](../acao.png)
+**_PÁGINA INICIAL_**
+![](images/pagina_inicial.PNG)
+
+
+**_PÁGINA DE CONFIGURAÇÃO_**
+
+![](images/configuracao.PNG)
+
+
+**_PÁGINA DE MONITORAMENTO_**
+![](images/monitorar.PNG)
+
+
+**_PÁGINA DE AÇÃO_**
+
+![](images/acao.PNG)
 
 
 ## Vídeo
