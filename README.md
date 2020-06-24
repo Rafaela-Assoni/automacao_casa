@@ -22,33 +22,33 @@ Os estados atuais dessas variáveis podem ser visualizados através de uma inter
 
 ## Especificações do Projeto 
 _*Entrada Principal (Porta de entrada)_
-    * Como entrada principal, o sistema pode monitorar o estado atual da porta, destravar a porta remotamente, 
-    através de uma senha definida por uma das páginas da WEB, assim como, após destravada, a porta deve ser fechada 
-    em um tempo máximo, que também pode ser definido pelas páginas WEB. 
-    Caso isso não ocorra, um alarme sonoro é ativado na forma intermitente (2 min. ON e 5 min. OFF), 
-    até seu fechamento, ou desativação do alarme de forma manual (dado pela mesma senha do acesso).
+* Como entrada principal, o sistema pode monitorar o estado atual da porta, destravar a porta remotamente, 
+através de uma senha definida por uma das páginas da WEB, assim como, após destravada, a porta deve ser fechada 
+em um tempo máximo, que também pode ser definido pelas páginas WEB. 
+Caso isso não ocorra, um alarme sonoro é ativado na forma intermitente (2 min. ON e 5 min. OFF), 
+até seu fechamento, ou desativação do alarme de forma manual (dado pela mesma senha do acesso).
 
 _*Sala de Estar_
-    *A sala de estar conta com um sensor de temperatura, que é responsável por acionar o ar condicionado, 
-    com o objetivo de manter a temperatura no valor definido pelo usuário. Além disso o controle do ar e 
-    a luminosidade da sala também podem ser ativados remotamente de forma manual, por meio da interface WEB. 
+*A sala de estar conta com um sensor de temperatura, que é responsável por acionar o ar condicionado, 
+com o objetivo de manter a temperatura no valor definido pelo usuário. Além disso o controle do ar e 
+a luminosidade da sala também podem ser ativados remotamente de forma manual, por meio da interface WEB. 
 
 _*Cortinas da sala de estar e de jantar_
-    *As posições das cortinas das janelas poderão ser controladas e monitorada remotamente pela interface WEB. 
-    As cortinas devem abrir automaticamente conforme horários programados na página WEB de configuração, e três horários poderão ser programados:
+*As posições das cortinas das janelas poderão ser controladas e monitorada remotamente pela interface WEB. 
+As cortinas devem abrir automaticamente conforme horários programados na página WEB de configuração, e três horários poderão ser programados:
 
-    Horário 1 -> para abertura na metade do seu curso
-	Horário 2 -> para abertura total 
-	Horário 3 -> para fechamento total
+Horário 1 -> para abertura na metade do seu curs
+Horário 2 -> para abertura total 
+Horário 3 -> para fechamento total
 
-    Além do monitoramento das cortinas, o sistema também possui o monitoramento do vento externo, 
-    e tem como principal objetivo, no momento em que o vento externo ultrapassa a velocidade de 50km/h, 
-    as cortinas devem ser fechadas.
+Além do monitoramento das cortinas, o sistema também possui o monitoramento do vento externo, 
+e tem como principal objetivo, no momento em que o vento externo ultrapassa a velocidade de 50km/h, 
+as cortinas devem ser fechadas.
   
 _*Quarto e Banheiro_
-    *O cômodo do quarto e banheiro possui a luminosidade controlada remotamente, 
-    e, além disso, um sensor de temperatura. Quando a temperatura for inferior a 17°C, 
-    o aquecedor presente no local deve ser ligado automaticamente.
+*O cômodo do quarto e banheiro possui a luminosidade controlada remotamente, 
+ e, além disso, um sensor de temperatura. Quando a temperatura for inferior a 17°C, 
+ o aquecedor presente no local deve ser ligado automaticamente.
 
 ## Esquemático do proteus 
 
