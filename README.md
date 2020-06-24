@@ -17,7 +17,7 @@ O sistema monitora algumas variáveis como temperatura, velocidade do vento, pos
 estado da porta de entrada, etc. 
 Os estados atuais dessas variáveis podem ser visualizados através de uma interface WEB, sendo possível agir sobre elas.
 
-
+_PLANTA DO APARTAMENTO_
 ![](images/header.png)
 
 
@@ -58,9 +58,13 @@ Abaixo mostrado o esquemático da simulação no software utilizado (proteus).
 
 ## Páginas HTML
 
+_PÁGINA INICIAL_
 ![](images/pagina_inicial.PNG)
+_PÁGINA DE CONFIGURAÇÃO_
 ![](images/configuracao.PNG)
+_PÁGINA DE MONITORAMENTO_
 ![](images/monitorar.PNG)
+_PÁGINA DE AÇÃO_
 ![](images/acao.PNG)
 
 
