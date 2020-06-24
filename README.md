@@ -57,7 +57,9 @@ _*Quarto e Banheiro_
 
 Abaixo mostrado o esquemático da simulação no software utilizado (proteus).
 
-![]((Proteus.PDF)
+ <p align="center">
+        <img width="280" height="95" src="Proteus.PDF">
+      </p>
 
 
 ## Páginas HTML
