@@ -63,6 +63,7 @@ _PÁGINA INICIAL_
 
 
 _PÁGINA DE CONFIGURAÇÃO_
+
 ![](images/configuracao.PNG)
 
 
